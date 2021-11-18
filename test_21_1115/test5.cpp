@@ -13,12 +13,12 @@ int main()
 	
 	pizza* piz = new pizza;
 
-	cout << "Entry the pizza's diameter: ";
+	cout << "Enter the pizza's diameter: ";
 	cin >> piz->piz_dia;
-	cout << "Entry the company name: ";
+	cout << "Enter the company name: ";
 	cin.get();
 	getline(cin,piz->cmp_name);
-	cout << "Entry the pizza's weight: ";
+	cout << "Enter the pizza's weight: ";
 	cin >> piz->piz_wgt;
 
 	cout << "Company name: " << piz->cmp_name << endl;

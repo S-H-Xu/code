@@ -6,7 +6,7 @@ int main()
 	double tvarps = 0.0;
 	double tax = 0.0;
 	
-	while(cout << "please entry your salary: ",
+	while(cout << "please enter your salary: ",
 			cin >> tvarps && tvarps > 0)
 	{
 		if(tvarps <= 5000)

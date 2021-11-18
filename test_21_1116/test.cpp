@@ -6,9 +6,9 @@ int main()
 	int max_int = 0;
 	int sum = 0;
 
-	std::cout << "please entry the minimum integer: ";
+	std::cout << "please enter the minimum integer: ";
 	std::cin >> min_int;
-	std::cout << "please entry the maximum integer: ";
+	std::cout << "please enter the maximum integer: ";
 	std::cin >> max_int;
 
 	for(int i = min_int; i <= max_int; i++)

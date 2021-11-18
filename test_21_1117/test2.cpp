@@ -7,7 +7,7 @@ int main()
 {
 	char ch;
 	
-	cout << "please entry: ";
+	cout << "please enter: ";
 	while(cin.get(ch) && ch != '@')
 	{
 		if(isalpha(ch))

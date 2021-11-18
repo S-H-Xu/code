@@ -7,7 +7,7 @@ int main()
 	int count = 0;
 	string str;
 	string stop = "done";
-	cout << "entry words( to stop, type the word done): ";
+	cout << "enter words( to stop, type the word done): ";
 
 	do
 	{

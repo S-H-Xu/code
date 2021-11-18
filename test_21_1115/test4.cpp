@@ -11,11 +11,11 @@ int main()
 		float piz_wgt;
 	}piz1;
 	
-	cout << "Entry the company name: ";
+	cout << "Enter the company name: ";
 	getline(cin,piz1.cmp_name);
-	cout << "Entry the pizza's diameter: ";
+	cout << "Enter the pizza's diameter: ";
 	cin >> piz1.piz_dia;
-	cout << "Entry the pizza's weight: ";
+	cout << "Enter the pizza's weight: ";
 	cin >> piz1.piz_wgt;
 
 	cout << "Company name: " << piz1.cmp_name << endl;

@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {	
 	int input = 0;
-	cout << "please entry the number of line: ";
+	cout << "please enter the number of line: ";
 	cin >> input;
 
 	for(int i = 1; i <= input; i++)
