@@ -13,6 +13,11 @@ int main()
 
 	cout << "please enter golf score（end input with -1):" <<endl;
 	F_In(golf_s, Max);
+	if(!cin)
+	{
+		cout << "please enter legal data!" <<endl;
+		return 0;
+	}
 	F_Print(golf_s, Max);
 	double aver = F_Aver(golf_s, Max);
 	cout << "average = " << aver << endl;
