@@ -27,11 +27,8 @@ int main()
 
 void toggle_case(string &st)
 {
-	char* p = (char*)&st;
-
-	while(*p)
+	for(int i = 0; i < st.size(); i++)
 	{
-		*p = toupper(*p);
-		p++;
+		st[i] = toupper(st[i]);
 	}
 }
