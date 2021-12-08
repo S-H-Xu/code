@@ -21,8 +21,8 @@ class String
 		const char& operator[](int i) const;
 		String& operator=(const String& st);
 		String& operator=(const char* s);
-		String& operator+(String& st);
-		String& operator+(const char* s);
+		String operator+(String& st);
+		String operator+(const char* s);
 	
 		void stringup();
 		void stringlow();
@@ -30,7 +30,7 @@ class String
 	
 		static int HowMany();
 		
-		friend String& operator+(const char* s, String& st);
+		friend String operator+(const char* s, String& st);
 		friend bool operator<(const String& st1, const String& st2);
 		friend bool operator>(const String& st1, const String& st2);
 		friend bool operator==(const String& st1, const String& st2);
