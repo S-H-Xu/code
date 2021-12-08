@@ -13,26 +13,26 @@ void menu()
 
 void My_calc()
 {
-	//需要用户输入的参数
+	//脨猫脪陋脫脙禄搂脢盲脠毛碌脛虏脦脢媒
 	double total_water = 0.0;
 	double init_D = 0.0;
 	double selec_H_D = 0.0;
 	double final_D = 0.0;
 
-	//计算结果返回值
+	//录脝脣茫陆谩鹿没路碌禄脴脰碌
 	double final_w = 0.0;
 	double rec_D = 0.0;
 	
-	int z = Para_in(&total_water, &init_D, &selec_H_D, &final_D);//调用参数输入函数
+	int z = Para_in(&total_water, &init_D, &selec_H_D, &final_D);//碌梅脫脙虏脦脢媒脢盲脠毛潞炉脢媒
 
-	//判断用户输入值是否合法
+	//脜脨露脧脫脙禄搂脢盲脠毛脰碌脢脟路帽潞脧路篓
 	if (z)
 	{
-		printf("用户输入值非法！\n");
+		printf("脫脙禄搂脢盲脠毛脰碌路脟路篓拢隆\n");
 		return;
 	}
 
-	//调用计算函数,计算完成后返回循环次数
+	//碌梅脫脙录脝脣茫潞炉脢媒,录脝脣茫脥锚鲁脡潞贸路碌禄脴脩颅禄路麓脦脢媒
 	int count = Calc(total_water, init_D, selec_H_D, final_D,&final_w, &rec_D);
 
 	if (-1 == count)
@@ -40,7 +40,7 @@ void My_calc()
 		return;
 	}
 
-	Print(total_water, init_D, selec_H_D, final_D, final_w, rec_D, count);//调用结果输出函数
+	Print(total_water, init_D, selec_H_D, final_D, final_w, rec_D, count);//碌梅脫脙陆谩鹿没脢盲鲁枚潞炉脢媒
 }
 
 
@@ -49,21 +49,21 @@ int main()
 	int input = 0;
 	do
 	{
-		menu();//打印菜单
-		printf("请输入选项并以回车键结束（1/0）:>");
+		menu();//麓貌脫隆虏脣碌楼
+		printf("脟毛脢盲脠毛脩隆脧卯虏垄脪脭禄脴鲁碌录眉陆谩脢酶拢篓1/0拢漏:>");
 		scanf("%d", &input);
 		switch (input)
 		{
 		case 1:
-			My_calc();//调用计算器函数
+			My_calc();//碌梅脫脙录脝脣茫脝梅潞炉脢媒
 			break;
 		case 0:
-			printf("退出计算程序,请按任意键结束……\n");
+			printf("脥脣鲁枚录脝脣茫鲁脤脨貌,脟毛掳麓脠脦脪芒录眉陆谩脢酶隆颅隆颅\n");
 			getchar();
 			getchar();
 			break;
 		default:
-			printf("输入非法，请重新输入!\n");
+			printf("脢盲脠毛路脟路篓拢卢脟毛脰脴脨脗脢盲脠毛!\n");
 			break;
 		}
 
