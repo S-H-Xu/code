@@ -10,13 +10,13 @@ int main()
 
 	Stack s1;
 	Stack s2(5);
-	Stack s3(s1);
 
 	Item i = 0;
 	while(!s1.isfull())
 	{
 		s1.push(i++);
 	}
+	Stack s3(s1);
 
 	while(!s2.isfull())
         {
@@ -47,6 +47,14 @@ int main()
                 s2.pop(temp);
                 cout << temp << endl;
         }
+
+	cout << "s3: " << endl;
+	while(!s3.isempty())
+	{
+		Item temp;
+		s3.pop(temp);
+		cout << temp << endl;
+	}
 
 	return 0;
 }

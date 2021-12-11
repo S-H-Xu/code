@@ -41,6 +41,7 @@ bool Stack::push(const Item& item)
 	if(size >= size_max)
 		return false;	
 	pitems[++top] = item;
+	++size;
 	return true;
 }
 
@@ -59,7 +60,7 @@ Stack& Stack::operator=(const Stack& st)
 		return *this;
 	delete[] pitems;
 	pitems = new Item[st.size_max];
-	for(int i = 0; i < st.size; i++)
+	for(int i = 0; i < st.size_max; i++)
 		pitems[i] = st.pitems[i];
 	size_max = st.size_max;
 	size = st.size;
