@@ -11,6 +11,7 @@ class Stack
 		Item* pitems;
 		int size;
 		int top;
+		int size_max;
 	public:
 		Stack(int n = MAX);
 		Stack(const Stack& st);

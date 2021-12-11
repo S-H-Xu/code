@@ -5,16 +5,17 @@
 Stack::Stack(int n)
 {
 	pitems = new Item[n];
+	size_max = n;
 	size = 0;
-	top = 0;
+	top = -1;
 }
 
 Stack::Stack(const Stack& st)
 {
-	int temp = sizeof st.pitems / sizeof st.pitems[0];
-	pitems = new Item[temp];
-	for(int i = 0; i < temp; i++)
+	pitems = new Item[st.size_max];
+	for(int i = 0; i < st.size_max; i++)
 		pitems[i] = st.pitems[i];
+	size_max = st.size_max;
 	size = st.size;
 	top = st.top;
 }
@@ -32,15 +33,14 @@ bool Stack::isempty() const
 
 bool Stack::isfull() const
 {
-	return size >= MAX;
+	return size >= size_max;
 }
 
 bool Stack::push(const Item& item)
 {
-	if(size >= MAX)
-		return false;
-	pitems[top++] = item;
-	++size;
+	if(size >= size_max)
+		return false;	
+	pitems[++top] = item;
 	return true;
 }
 
@@ -58,10 +58,10 @@ Stack& Stack::operator=(const Stack& st)
 	if(this == &st)
 		return *this;
 	delete[] pitems;
-	int temp = sizeof st.pitems / sizeof st.pitems[0];
-	pitems = new Item[temp];
-	for(int i = 0; i < temp; i++)
+	pitems = new Item[st.size_max];
+	for(int i = 0; i < st.size; i++)
 		pitems[i] = st.pitems[i];
+	size_max = st.size_max;
 	size = st.size;
 	top = st.top;
 	return *this;

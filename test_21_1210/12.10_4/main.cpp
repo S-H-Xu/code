@@ -12,15 +12,14 @@ int main()
 	Stack s2(5);
 	Stack s3(s1);
 
+	Item i = 0;
 	while(!s1.isfull())
 	{
-		Item i = 0;
 		s1.push(i++);
 	}
 
 	while(!s2.isfull())
         {
-                Item i = 10;
                 s2.push(i++);
         }
 
