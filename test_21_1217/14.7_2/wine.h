@@ -10,18 +10,16 @@ typedef std::valarray<int> ArrayInt;
 //typedef std::pair<ArrayInt, ArrayInt> PairArray;
 typedef Pair<ArrayInt, ArrayInt> PairArray;
 
-class Wine
+class Wine : private std::string, private PairArray
 {
 	private:
-		std::string label;
-		PairArray data;
 		int years;//years number
 	public:
 		Wine();
 		Wine(const char* l, int y, const int yr[], const int bot[]);
 		Wine(const char* l, int y );
 		void GetBottles();
-		std::string& Label() { return label;}
+		const std::string& Label() { return (const std::string&)*this;}
 		int sum() const;
 		void Show() const;
 };

@@ -4,11 +4,11 @@
 
 using namespace std;
 
-Wine::Wine() : label("none"), years(0), data(ArrayInt(0), ArrayInt(0)) {}
+Wine::Wine() : string("none"), years(0), PairArray(ArrayInt(0), ArrayInt(0)) {}
 
-Wine::Wine(const char* l, int y, const int yr[], const int bot[]) : label(l), years(y), data(ArrayInt(yr, y), ArrayInt(bot, y)) {}
-
-Wine::Wine(const char* l, int y) : label(l), years(y), data(ArrayInt(y), ArrayInt(y)) {}
+Wine::Wine(const char* l, int y, const int yr[], const int bot[]) : string(l), years(y),
+	PairArray(ArrayInt(yr,y),ArrayInt(bot,y)) {}
+Wine::Wine(const char* l, int y) : string(l), years(y), PairArray(ArrayInt(y), ArrayInt(y)) {}
 
 void Wine::GetBottles()
 {
@@ -20,8 +20,8 @@ void Wine::GetBottles()
 		cin >> yrs;
 		cout << "Enter bottles of this year: ";
 		cin >> bots;
-		data.first()[i] = yrs;
-		data.second()[i] = bots;
+		first()[i] = yrs;
+		second()[i] = bots;
 	}
 }
 
@@ -31,13 +31,13 @@ int Wine::sum() const
 	for (int i = 0; i < years; i++)
 		sum += data.second()[i];
 	return sum;*/
-	return data.second().sum();
+	return second().sum();
 }
 
 void Wine::Show() const
 {
-	cout << "Wine: " << label << endl;
+	cout << "Wine: " << (const string&)*this << endl;
 	cout << "	" << "Year" << "	" << "Bottles\n";
 	for (int i = 0; i < years; i++)
-		cout << "	" << data.first()[i] << "	" << data.second()[i] << endl;
+		cout << "	" << first()[i] << "	" << second()[i] << endl;
 }
