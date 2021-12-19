@@ -10,7 +10,6 @@ int main()
 
 	QueueTp<Worker> list1;
 	QueueTp<Worker> list2(3);
-	QueueTp<Worker> list3(list1);
 	Worker temp;
 	int i = 1;
 	std::string test = "test";
@@ -21,6 +20,8 @@ int main()
 		list1.push(temp);
 		++i;
 	}
+
+	QueueTp<Worker> list3(list1);
 
 	while(!list2.isfull())
 	{
@@ -45,6 +46,7 @@ int main()
 		cout << endl;
 	}
 	
+	cout << "list2:\n";	
 	while(!list2.isempty())
 	{
 		Worker temp;

@@ -73,7 +73,7 @@ bool QueueTp<T>::pop(T& t)
 {
 	if (size <= 0)
 		return false;
-	t = data[top--];
+	t = data[--top];
 	--size;
 	return true;
 }
@@ -90,5 +90,6 @@ QueueTp<T>& QueueTp<T>::operator=(QueueTp<T>& t)
 	data = new T[max];
 	for (int i = 0; i < max; i++)
 		data[i] = t.data[i];
+	return *this;
 }
 #endif
